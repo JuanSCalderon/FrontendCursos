@@ -1,3 +1,23 @@
+### Título
+Cursos Frontend
+
+### Descripción
+Creación de componente que permita realizar el CRUD (Crear, Registrar, Actualizar, Eliminar) consumiendo los
+servicios expuestos por el BACKEND.
+
+### Requerimientos
+- Node.js
+- Angular CLI
+
+### Instalación
+1. Clona el repositorio de GitHub.
+2. Abre una terminal y navega a la carpeta del proyecto.
+3. Ejecuta `npm install` para instalar las dependencias del proyecto.
+4. Ejecuta `ng serve` para iniciar el servidor de desarrollo.
+
+
+
+
 # CursosApp
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.7.
