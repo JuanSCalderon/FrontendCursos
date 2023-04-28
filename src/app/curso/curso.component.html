@@ -1,0 +1,44 @@
+<div>
+  <h2>Crear/Editar Curso</h2>
+  <form (submit)="onSubmit()">
+    <input type="hidden" [(ngModel)]="selectedCurso.id" name="id" />
+    <label for="nombre">Nombre:</label>
+    <input type="text" [(ngModel)]="selectedCurso.nombre" name="nombre" />
+    <label for="fecha_inicio">Fecha Inicio:</label>
+    <input
+      type="date"
+      [(ngModel)]="selectedCurso.fecha_inicio"
+      name="fecha_inicio"
+    />
+    <label for="fecha_fin">Fecha Fin:</label>
+    <input type="date" [(ngModel)]="selectedCurso.fecha_fin" name="fecha_fin" />
+    <button type="submit">Guardar</button>
+  </form>
+</div>
+
+<div>
+  <h2>Listado de Cursos</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Nombre</th>
+        <th>Fecha Inicio</th>
+        <th>Fecha Fin</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let curso of cursos">
+        <td>{{ curso.id }}</td>
+        <td>{{ curso.nombre }}</td>
+        <td>{{ curso.fecha_inicio }}</td>
+        <td>{{ curso.fecha_fin }}</td>
+        <td>
+          <button (click)="onEdit(curso)">Editar</button>
+          <button (click)="onDelete(curso.id)">Eliminar</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
